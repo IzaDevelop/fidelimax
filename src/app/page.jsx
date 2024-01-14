@@ -269,7 +269,7 @@ export default function Home() {
               <Checkbox
                 id={'six'}
                 label={questions?.itens[5]?.content}
-                required={fields.sixlength === 0 ? questions?.itens[5]?.mandatory : false}
+                required={fields.six.length === 0 ? questions?.itens[5]?.mandatory : false}
                 options={optionMultipleSelect}
                 onChange={handleMultipleSelect}
                 value={fields.six}
