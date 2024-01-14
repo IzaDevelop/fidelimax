@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background: -moz-linear-gradient(top, #19202D 20%, #F2F4F8 20%);
+	background: -webkit-linear-gradient(top, #19202D 20%,#F2F4F8 20%);
+	background: linear-gradient(to bottom, #19202D 20%,#F2F4F8 20%);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #F2F4F8;
+}  
