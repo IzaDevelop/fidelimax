@@ -57,15 +57,15 @@ export default function Home() {
               delete object['description']
             });
 
-            setFields({
-              ...fields,
+            setFields((prevFields) => ({
+              ...prevFields,
               one: response.data.itens[0].answerValue,
               two: response.data.itens[1].answerValue,
               five: response.data.itens[4].answerValue,
               six: dataSix.map(e => e.value),
               seven: dataSeven.map(e => e.value),
               eight: response.data.itens[7].answerValue,
-            })
+            }))
 
             setLoading(false)
           } else {
@@ -270,7 +270,7 @@ export default function Home() {
                 id={'six'}
                 label={questions?.itens[5]?.content}
                 required={fields.sixlength === 0 ? questions?.itens[5]?.mandatory : false}
-                options={optionCheckbox}
+                options={optionMultipleSelect}
                 onChange={handleMultipleSelect}
                 value={fields.six}
                 custom={questions?.itens[5]?.horizontal}
